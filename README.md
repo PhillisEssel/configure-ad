@@ -51,6 +51,6 @@ Then create an Admin and Normal user acccount. Create an Organizational Unit cal
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next Login to DC and verify Client-1 shows up in Active Directory Users and Computers (ADUC) under "Computers" container on root of the domain. Set up remote desktop for non-admin users on Client-1. log in as the domain admin and open system properties, click "remote desktop" and allow "domain users" access to it so you can log in as a normal non-admin user.
+Next Login to DC and verify Client-1 shows up in Active Directory Users and Computers (ADUC) under "Computers" container on root of the domain. Set up remote desktop for non-admin users on Client-1. log in as the domain admin and open system properties, click "remote desktop" and allow "domain users" access to it so you can log in as a normal non-admin user. Next create a bunch of additional users and attempt to log into Client-1 as one of them (good for businesses that have thousands of employees or schools that have thousands of students). Login to DC-1 as admin, open Powershell_ise as an administrator, create a new file and paste the contents of the script into it. Run the script and observe the accounts being created. After, open ADUC and observe the accounts in OU and attempt to login as one on Client-1. 
 </p>
 <br />
