@@ -35,7 +35,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Set Up Rescouces in Azure cloud. Creat Domain Controller, name it "DC-1," then set DC's NIC Private IP address to be static. Next create the Client VM, name it "Client-1," use the same resouce group and vnet that was created for VM 1 (DC). check topology with Network Watcher. Next insure connectivity for both VMs. Login to Client-1 Remote Desktop and ping DC-1'S Private IP address (perpetual ping). Login to DC and enable ICMPV4 in the local windows Firewall then check back into Client-1 and make sure the ping is successful.
+Set Up Rescouces in Azure cloud. Creat Domain Controller, name it "DC-1," then set DC's NIC Private IP address to be static. Next create the Client VM, name it "Client-1," use the same resouce group and vnet that was created for VM 1 (DC). check topology with Network Watcher. Next insure connectivity for both VMs. Login to Client-1 Remote Desktop and ping DC-1'S Private IP address (perpetual ping). Login to DC and enable ICMPV4 in the local windows Firewall then check back into Client-1 and make sure the ping is successful. Next you are going to install Active Directory. Login to DC-1 and instal Active Directory Domain Services. Promote as a DC: Set Up a new forest with any domain name (example: mydomain.com). Restart and then log back into DC-1 as user mydomain.com\labuser.
 </p>
 <br />
 
@@ -43,7 +43,7 @@ Set Up Rescouces in Azure cloud. Creat Domain Controller, name it "DC-1," then s
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Nest you are going to install Active Directory. Login to DC-1 and instal Active Directory Domain Services. Promote as a DC: Set Up a new forest with any domain name (example: mydomain.com). Restart and then log back into DC-1 as user mydomain.com\labuser. Then create an Admin and Normal user acccount. Create an Organizational Unit called "_EMPLOYEES" Create another OU name called "_ADMINS" Create a new emyployee(ex:Jane Doe) and a username(ex:jane_admin). add the user to "Domain Admins" Security Group. Log out/close Remote Desktop connection to DC-1 and log back in as "mydomain.com\jane_admin" or whatever username you did. the user is an admin account from now on.
+Then create an Admin and Normal user acccount. Create an Organizational Unit called "_EMPLOYEES" Create another OU name called "_ADMINS" Create a new emyployee(ex:Jane Doe) and a username(ex:jane_admin). add the user to "Domain Admins" Security Group. Log out/close Remote Desktop connection to DC-1 and log back in as "mydomain.com\jane_admin" or whatever username you did. the user is an admin account from now on. Next you join Client-1 to your domain. Go to the azure portal and set Client-1's DNS settings to the DC's Private IP address and proceed to restart Client-1 from the Azure Portal. Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will automatically restart). 
 </p>
 <br />
 
@@ -51,6 +51,6 @@ Nest you are going to install Active Directory. Login to DC-1 and instal Active 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next Login to DC and verify Client-1 shows up in Active Directory Users and Computers (ADUC) under "Computers" container on root of the domain. Set up remote desktop for non-admin users on Client-1. log in as the domain admin and open system properties, click "remote desktop" and allow "domain users" access to it so you can log in as a normal non-admin user.
 </p>
 <br />
