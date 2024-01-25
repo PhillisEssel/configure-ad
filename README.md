@@ -49,7 +49,7 @@ Set Up Rescouces in Azure cloud. Creat Domain Controller, name it "DC-1," then s
   
 ![Configuring Active Directory Phase 2 - Imgur](https://github.com/PhillisEssel/configure-ad/assets/156061642/1d4bcfc3-deee-490d-a35c-6eaf605e0818)
 
-<p><a href="https://imgur.com/a/6cO46ET">More</a></p>
+<p><a href="https://imgur.com/a/Rqrejvt">More</a></p>
   
 </p>
 <p>
@@ -62,7 +62,7 @@ Then create an Admin and Normal user acccount. Create an Organizational Unit cal
 
 ![Configuring Active Directory Phase 3 - Imgur](https://github.com/PhillisEssel/configure-ad/assets/156061642/4340a86f-e2a9-4ad8-abfe-8bd1f42b41df)
 
-<p><a href="https://imgur.com/a/6cO46ET)">More</a></p>
+<p><a href="https://imgur.com/a/6cO46ET">More</a></p>
   
 </p>
 <p>
